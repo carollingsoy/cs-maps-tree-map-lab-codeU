@@ -72,6 +72,7 @@ public class MyTreeMap<K, V> implements Map<K, V> {
 		Comparable<? super K> k = (Comparable<? super K>) target;
 		
 		// the actual search
+        	// TODO: Fill this in.
         	return findNodeHelper(root, k);
 	}
 
@@ -110,6 +111,7 @@ public class MyTreeMap<K, V> implements Map<K, V> {
 
 	@Override
 	public boolean containsValue(Object target) {
+		// TODO: fill this in
 		return containsValueHelper(root, target);
 	}
 
@@ -150,12 +152,15 @@ public class MyTreeMap<K, V> implements Map<K, V> {
 	@Override
 	public Set<K> keySet() {
 		Set<K> set = new LinkedHashSet<K>();
+        	// TODO: Fill this in.
 		return keySetHelper(set, root);
 	}
 
 	private Set<K> keySetHelper(Set<K> set, Node node) {
 		if (node == null)
 			return set;
+		//if (node.left == null && node.right == null)
+		//	return;
 
 		keySetHelper(set, node.left);
 		set.add(node.key);
